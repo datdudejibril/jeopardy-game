@@ -2,52 +2,96 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" type="text/css" href="main.css">
+<!--link css and booststap-->
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
 </head>
 <body>
-<div class="categories-wrapper">
-  <div class="row">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 
+
+<div class="container">
+
+  <div class="heading ">
+  <!--boostrap responsive logo-->
+              <img src="../Giant_Jeopardy_Logo.png" class="img-responsive" height="85px" width="300" alt="Giant_Jeopardy_Logo"/>
+
+
+
+          </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+  <!--Bootstrap Columns https://getbootstrap.com/examples/grid/-->
+      <div class="text-center col-md-2" ><h4>Category 1</h4></div>
+      <div class="text-center col-md-2"><h4>Category 2</h4></div>
+      <div class="text-center col-md-2"><h4>Category 3</h4></div>
+      <div class="text-center col-md-2"><h4>Category 4</h4></div>
+      <div class="clearfix"></div> <!-- clearfix squares the header around the headings. it basically fixes everything -->
+    </div>
+    <div class="panel-body" id="main-board">
+      <div class="category col-md-2">
+        <a id="myBtn"><div class="well clue">100</div></a>
+        <a id="myBtn"><div class="well clue">200</div></a>
+        <a id="myBtn"><div class="well clue">300</div></a>
+        <a id="myBtn"><div class="well clue">400</div></a>
+      </div>
+      <div class="category col-md-2">
+        <a id="myBtn"><div class="well clue">100</div></a>
+        <a id="myBtn"><div class="well clue">200</div></a>
+        <a id="myBtn"><div class="well clue">300</div></a>
+        <a id="myBtn"><div class="well clue">400</div></a>
+      </div>
+      <div class="category col-md-2">
+        <a id="myBtn"><div class="well clue">100</div></a>
+        <a id="myBtn"><div class="well clue">200</div></a>
+        <a id="myBtn"><div class="well clue">300</div></a>
+        <a id="myBtn"><div class="well clue">400</div></a>
+      </div>
+      <div class="category col-md-2">
+        <a id="myBtn"><div class="well clue">100</div></a>
+        <a id="myBtn"><div class="well clue">200</div></a>
+        <a id="myBtn"><div class="well clue">300</div></a>
+        <a id="myBtn"><div class="well clue">400</div></a>
+      </div>
+
+    </div>
+    <div class="panel-footer">
+      <div class="pull-right"><h4>Score: <span id="score">0</span></h4></div>
+      <div class="clearfix"></div>
+          </div>
+  </div>
+
+  <!-- modal reference https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2-->
+<!-- Trigger/Open The Modal -->
+<!--<button id="myBtn">Open Modal</button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
   </div>
 
 </div>
 
-<div class="clues-wrapper">
-  <div class="columns">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="columns">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="columns">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="columns">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
+</div>
 
 
 </div>
+<script src="main.js"></script>
 
 
 
