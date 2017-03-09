@@ -1,9 +1,110 @@
 
-//define clues
+//define question
 var clues = []; // javascript array to manange clues instead of ajax
 
-// QUESTION # 1
-clues.push('What is your name?');
+// Clues tht are part of the array. .push sends each string to the array based on the index position
+clues.push('Clue 1 Category 1');
+clues.push('Clue 2 Category 1');
+clues.push('Clue 3 Category 1');
+clues.push('Clue 4 Category 1');
+clues.push('Clue 1 Category 2');
+clues.push('Clue 2 Category 2');
+clues.push('Clue 3 Category 2');
+clues.push('Clue 4 Category 2');
+clues.push('Clue 1 Category 3');
+clues.push('Clue 2 Category 3');
+clues.push('Clue 3 Category 3');
+clues.push('Clue 4 Category 3');
+clues.push('Clue 1 Category 4');
+clues.push('Clue 2 Category 4');
+clues.push('Clue 3 Category 4');
+clues.push('Clue 4 Category 4');
+
+
+var choices = []; // javascript array to manange clues instead of ajax
+
+// Clues tht are part of the array. .push sends each string to the array based on the index position
+choices.push('Clue 1 Category 1 Choice A');
+choices.push('Clue 1 Category 1 Choice B');
+choices.push('Clue 1 Category 1 Choice C');
+choices.push('Clue 1 Category 1 Choice D');
+choices.push('Clue 2 Category 1 Choice A');
+choices.push('Clue 2 Category 1 Choice B');
+choices.push('Clue 2 Category 1 Choice C');
+choices.push('Clue 2 Category 1 Choice D');
+choices.push('Clue 3 Category 1 Choice A');
+choices.push('Clue 3 Category 1 Choice B');
+choices.push('Clue 3 Category 1 Choice A');
+choices.push('Clue 3 Category 1 Choice A');
+
+
+choices.push('Clue 4 Category 1' Choice A);
+
+
+
+
+choices.push('Clue 1 Category 2' Choice A);
+
+
+
+
+choices.push('Clue 2 Category 2' Choice A);
+
+
+
+
+choices.push('Clue 3 Category 2' Choice A);
+
+
+
+
+choices.push('Clue 4 Category 2' Choice A);
+
+
+
+
+choices.push('Clue 1 Category 3' Choice A);
+
+
+
+
+choices.push('Clue 2 Category 3' Choice A);
+
+
+
+
+choices.push('Clue 3 Category 3 Choice A');
+
+
+
+
+choices.push('Clue 4 Category 3 Choice A');
+
+
+
+
+choices.push('Clue 1 Category 4 Choice A');
+
+
+
+
+choices.push('Clue 2 Category 4 Choice A');
+
+
+
+
+choices.push('Clue 3 Category 4 Choice A');
+
+
+
+
+choices.push('Clue 4 Category 4 Choice A');
+
+
+
+
+
+
 
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -14,6 +115,8 @@ var btn = document.getElementsByClassName("well");
 // Declares variable score equal to element ID and pass the obejct 'score'
 var score = document.getElementById('score');
 // Declare variable addTo Score and passed the object "p" in the function
+
+
 var addToScore= function (p){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
@@ -54,6 +157,7 @@ var findClassIndex = function() {
 
 
         // check if element is already disabled by using function hasAttribute which is built in function.
+        // // if element is does not have the attritribute disabled, then shows modal
      if(!e.target.hasAttribute('disabled')){
       modal.style.display = "block";
       // e.taget is equal to getelementById in this case
@@ -63,6 +167,8 @@ var findClassIndex = function() {
       points = e.target.innerHTML;
       var qno =e.target.getAttribute('qno');
       showQuestion(qno);
+      var qno =e.target.getAttribute('cno');
+      showChoice(cno);
       // DO IT ONLY IF THE ANSWER IS RIGHT THIS IS JUST FOR TESTING PURPOSE
       addToScore(points);
       // removing html tags and extracting plain text. for reference
@@ -72,25 +178,47 @@ var findClassIndex = function() {
   }
 }
 findClassIndex();
-
-// show question based on element clicked and extract it from clues array.
-var showQuestion= function(qno){
- var question = clues[qno];
- document.getElementById('question').innerHTML = question;
-}
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks the button, open the modal
 // btn.onclick = function(e) {
 // console.log(this);
 //  modal.style.display = "block";
 // }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+
+// show slues based on element clicked and extract it from clues array.
+var showQuestion= function(qno){
+ var question = clues[qno];
+ document.getElementById('clue').innerHTML = question;
 }
+
+// show choices based on element clicked and extract it from choices array.
+var showChoice= function(cno){
+ var choice = choices[cno];
+ document.getElementById('clue').innerHTML = question;
+}
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("btn-primary");
+
+
+// When the user clicks on <span> (x), close the modal
+var closeButtonByIndex = function() {
+// for loop that loops throught the length of the array clases to the end
+  for (i = 0; i < span.length; i++) {
+   //assigns the interation of element clicked in the array to button and gives it an attribute of 'cno' and i
+
+     //when interation of a element class is clicked pass the event listener object.
+     span[i].onclick = function() {
+      // e.target provide  access to attributes of the clicked element.
+      // https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+      console.log();
+      modal.style.display = "none";
+
+}
+}
+}
+setTimeout(closeButtonByIndex(), 3000)
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
