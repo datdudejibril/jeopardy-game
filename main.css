@@ -14,6 +14,7 @@
 .heading img {
   margin: 0 auto;
   padding-bottom: 10px;
+  padding-top: 30px;
 }
 
 .panel-body {
@@ -24,15 +25,35 @@
 .panel-heading {
   display: flex;
   justify-content: center;
+  background-color: #C2BBF0 !important;
+  border-color: #fff ;
 
 }
 
 .container {
   margin: 5% auto;
+  background-color:rgba(238, 238, 238, 0.3);
 }
 
 h4 {
   font-size: 1.4em;
+  text-decoration: none;
+}
+
+.category a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+.category a:hover,
+.category a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 /* Modal Header */
@@ -50,6 +71,7 @@ h4 {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+    height: 2%;
 }
 
 /* Modal Content */

@@ -75,22 +75,22 @@ var score = document.getElementById('score');
 // Declare variable addTo Score and passed the object "p" in the function
 
 
-var addToScore= function (p){
+var addToScore = function (p){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
-  var current_score= parseInt(score.innerHTML);
+  var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score + the score parsed from the html
-  var new_score = current_score+p;
+  var new_score = (current_score + p);
 // stores the value
   score.innerHTML = new_score;
 }
 // Declare variable subtractFromScore and passes the object "p" in the function
-var subtractFromScore= function (p){
+var subtractFromScore = function (p){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
-  var current_score= parseInt(score.innerHTML);
+  var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score minus the score parsed from the html
-  var new_score = current_score-p;
+  var new_score = current_score - p;
 // updates the property to equal the variable new_score.
   score.innerHTML = new_score;
 }
@@ -123,7 +123,7 @@ var findClassIndex = function() {
       e.target.setAttribute('style','background-color:grey;');
       //  get the text inside any element including html + text
       points = e.target.innerHTML;
-      var qno =e.target.getAttribute('qno');
+      var qno = e.target.getAttribute('qno');
       showQuestion(qno);
       // DO IT ONLY IF THE ANSWER IS RIGHT THIS IS JUST FOR TESTING PURPOSE
       addToScore(points);
@@ -141,12 +141,10 @@ findClassIndex();
 // }
 
 
-
-
 // show question based on element clicked and extract it from clues array.
-var showQuestion= function(index){
+var showQuestion = function(index){
  var question = clues[index];
-
+ document.getElementById('clue').innerHTML = question;
  addChoices(index);
 }
 
@@ -168,26 +166,28 @@ for(i=0;i<choice_btns.length;i++){
   choice_btns[i].onclick = function(e){
       var user_selected= e.target.getAttribute('choice_number');
       if(user_selected == right_answer){
-        alert('VOlla');
-
+        //alert('VOlla');
+        result.innerHTML = "Correct";
         setTimeout('closeModal()',2000); // close after 2 secs;
+
       }else{
-        alert('WRONG ANSWER');
-
+        //alert('WRONG ANSWER');
+        result.innerHTML = "Wrong";
         setTimeout('closeModal()',2000);
-
       }
+
   }
 }
 
 var closeModal = function(){
   modal.style.display = "none";
+  result.innerHTML = "";
 }
 
-var showResult = function(){
+// var showResult = function(){
 
 
-}
+// }
 
 // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("btn-primary");
@@ -218,4 +218,8 @@ window.onclick = function(event) {
     }
 }
 
-
+//reset page
+// function resetPage() {
+//     document.getelementById('resetPage');
+//     location.reload();
+// }

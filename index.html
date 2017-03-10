@@ -59,6 +59,9 @@
     </div>
     <div class="panel-footer">
       <div class="pull-right"><h4>Score: <span id="score">0</span></h4></div>
+      <!-- http://stackoverflow.com/questions/15345500/onclick-refresh-then-href-with-the-same-click/15345708 -->
+      <div class="pull-left"><a href="#" onClick="window.location.reload();return false;"><h4>Reset Game</h4></a></div>
+
       <div class="clearfix"></div>
           </div>
   </div>
@@ -73,22 +76,22 @@
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
-      <span class="close">&times;</span>
+   <!--    <span class="close">&times;</span> -->
       <h2 id="clue">Modal Header</h2>
     </div>
     <div class="modal-body">
       <!-- <p id="answer">Some text in the Modal Body</p> -->
       <div class="btn-group-vertical" id="answer">
-      <button type="button" class="btn btn-primary">Apple</button>
-      <button type="button" class="btn btn-primary">Samsung</button>
-      <button type="button" class="btn btn-primary">Sony</button>
-      <button type="button" class="btn btn-primary">Sony</button>
+      <button type="button" id="choice1" class="btn btn-primary">Apple</button>
+      <button type="button" id="choice2" class="btn btn-primary">Samsung</button>
+      <button type="button" id="choice3" class="btn btn-primary">Sony</button>
+      <button type="button" id="choice4" class="btn btn-primary">Sony</button>
       </div>
 
       </p>
     </div>
     <div class="modal-footer">
-      <h3 id="response">Correct!</h3>
+      <h3 id="result"></h3>
     </div>
   </div>
 
@@ -98,7 +101,7 @@
 
 
 </div>
-<script src="main.js"></script>
+<script src="main1.js"></script>
 
 
 
