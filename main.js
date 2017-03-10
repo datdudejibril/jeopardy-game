@@ -1,45 +1,44 @@
-
 //define question
 var clues = []; // javascript array to manange clues instead of ajax
 
 // Clues tht are part of the array. .push sends each string to the array based on the index position
-clues.push('Clue 1 Category 1');
-clues.push('Clue 2 Category 1');
-clues.push('Clue 3 Category 1');
-clues.push('Clue 4 Category 1');
-clues.push('Clue 1 Category 2');
-clues.push('Clue 2 Category 2');
-clues.push('Clue 3 Category 2');
-clues.push('Clue 4 Category 2');
-clues.push('Clue 1 Category 3');
-clues.push('Clue 2 Category 3');
-clues.push('Clue 3 Category 3');
-clues.push('Clue 4 Category 3');
-clues.push('Clue 1 Category 4');
-clues.push('Clue 2 Category 4');
-clues.push('Clue 3 Category 4');
-clues.push('Clue 4 Category 4');
+clues.push('Getting the type of arguments passed to a function');
+clues.push('A built-in method that reverses the order of the elements of an array');
+clues.push('A jQuery method that sets the html contents of an element');
+clues.push('A jQuery method that removes elements matching the specified selector from the set of matched elements');
+clues.push('A preferred styling library than Bootstrap');
+clues.push('The company that invented Bootstrap');
+clues.push('Bootstrap style that is used to add text to .navbar');
+clues.push('Class that indicates a dangerous or potentially negative action');
+clues.push('Built-in method that calls a function for each element in the array');
+clues.push('Type of variable that takes precedence over other if names are same');
+clues.push('Function of Array object that removes the first element from an array and returns that element');
+clues.push('Built-in method that returns the string representation of the numbers value');
+clues.push('CSS rule that would capitalize every letter in your h1');
+clues.push('The type of attribute used in src="/css/main.css"');
+clues.push('Selector that matches a particular element only when it lies inside a particular element');
+clues.push('property is used to set the background image of an element');
 
 
 var choices = new Array; // javascript array to manange clues instead of ajax
 var right_answer = 0;
 // Clues tht are part of the array. .push sends each string to the array based on the index position
-choices.push({'options' : ['A1 Choice 1','A1 Choice 2','A1 Choice 3','A1 Chioce 4'],'right_option' : 1});
-choices.push({'options' : ['A2 Choice 1','A2 Choice 2','A2 Choice 3','A2 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['A3 Choice 1','A3 Choice 2','A3 Choice 3','A3 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['A4 Choice 1','B1 Choice 2','B1 Choice 3','B1 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['B1 Choice 1','A2 Choice 2','A2 Choice 3','A2 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['B2 Choice 1','B2 Choice 2','B2 Choice 3','B2 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['B3 Choice 1','B3 Choice 2','B3 Choice 3','B3 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['B4 Choice 1','B4 Choice 2','B4 Choice 3','B4 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['C1 Choice 1','C1 Choice 2','C1 Choice 3','C1 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['C2 Choice 1','C2 Choice 2','C2 Choice 3','C2 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['C3 Choice 1','C3 Choice 2','C3 Choice 3','C3 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['C4 Choice 1','C4 Choice 2','C4 Choice 3','C4 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['D1 Choice 1','D1 Choice 2','D1 Choice 3','D1 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['D2 Choice 1','D2 Choice 2','D2 Choice 3','D2 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['D3 Choice 1','D3 Choice 2','D3 Choice 3','D3 Chioce 4'],'right_option' : 4});
-choices.push({'options' : ['D4 Choice 1','D4 Choice 2','D4 Choice 3','D4 Chioce 4'],'right_option' : 4});
+choices.push({'options' : ['typeof operator','getType function','Both 1 & 2','none above'],'right_option' : 1});
+choices.push({'options' : ['changeOrder(order)','reverse()','sort(order)','direction()'],'right_option' : 2});
+choices.push({'options' : ['html( val )','setHtml( val )','setInnerHtml( val )','setInsideHtml( val )'],'right_option' : 1});
+choices.push({'options' : ['getNotEquals( selector )','isNotEquals( selector )','not(selector)','on(selector)'],'right_option' : 3});
+choices.push({'options' : ['Chex Box','Hex Box','Flex Box','Lex Box'],'right_option' : 3});
+choices.push({'options' : ['Google','Myspace','Instagram','Twitter'],'right_option' : 4});
+choices.push({'options' : ['.navbar-text','.text','.form-text','.link-text'],'right_option' : 1});
+choices.push({'options' : ['.active','.success','.warning','.danger'],'right_option' : 4});
+choices.push({'options' : ['while()','loop()','forEach()','None of the above.'],'right_option' : 3});
+choices.push({'options' : ['global variable','local variable','Both of the above','None of the above'],'right_option' : 2});
+choices.push({'options' : ['reverse()','shift()','slice()','some()'],'right_option' : 2});
+choices.push({'options' : ['toValue()','toNumber()','toString()','None of the above'],'right_option' : 3});
+choices.push({'options' : ['h1 { text-transform: uppercase; }','h1 { text-decoration: capitals; }','h1 { text-transform: all-caps; }','h1 { font-size: uppercase; }'],'right_option' : 1});
+choices.push({'options' : ['Absolute address','Proximal address','Relative address','Delivery address'],'right_option' : 3});
+choices.push({'options' : ['The Type Selector','The Universal Selector','The Descendant Selector','The Class Selector'],'right_option' : 3});
+choices.push({'options' : ['background-color','background-image','background-repeat','background-position'],'right_option' : 2});
 
 
 /*
@@ -75,28 +74,28 @@ var score = document.getElementById('score');
 // Declare variable addTo Score and passed the object "p" in the function
 
 
-var addToScore= function (p){
+var addToScore = function (){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
-  var current_score= parseInt(score.innerHTML);
+  var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score + the score parsed from the html
-  var new_score = current_score+p;
+  var new_score = parseInt(current_score + points);
 // stores the value
   score.innerHTML = new_score;
 }
 // Declare variable subtractFromScore and passes the object "p" in the function
-var subtractFromScore= function (p){
+var subtractFromScore = function (){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
-  var current_score= parseInt(score.innerHTML);
+  var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score minus the score parsed from the html
-  var new_score = current_score-p;
+  var new_score = parseInt(current_score - points);
 // updates the property to equal the variable new_score.
   score.innerHTML = new_score;
 }
 
 
-var points;
+var points = 0;
 
 
 //funcion to find index of a click class in array
@@ -122,11 +121,11 @@ var findClassIndex = function() {
       e.target.setAttribute('disabled','disabled');
       e.target.setAttribute('style','background-color:grey;');
       //  get the text inside any element including html + text
-      points = e.target.innerHTML;
-      var qno =e.target.getAttribute('qno');
+      points = parseInt(e.target.innerHTML);
+      var qno = e.target.getAttribute('qno');
       showQuestion(qno);
       // DO IT ONLY IF THE ANSWER IS RIGHT THIS IS JUST FOR TESTING PURPOSE
-      addToScore(points);
+      // addToScore(points);
       // removing html tags and extracting plain text. for reference
        // console.log(e.target.innerHTML.replace(/<[^>]*>/g, ""));
     }
@@ -141,12 +140,10 @@ findClassIndex();
 // }
 
 
-
-
 // show question based on element clicked and extract it from clues array.
-var showQuestion= function(index){
+var showQuestion = function(index){
  var question = clues[index];
-
+ document.getElementById('clue').innerHTML = question;
  addChoices(index);
 }
 
@@ -168,26 +165,29 @@ for(i=0;i<choice_btns.length;i++){
   choice_btns[i].onclick = function(e){
       var user_selected= e.target.getAttribute('choice_number');
       if(user_selected == right_answer){
-        alert('VOlla');
-
+        //alert('VOlla');
+        result.innerHTML = "Correct";
         setTimeout('closeModal()',2000); // close after 2 secs;
+        addToScore();
       }else{
-        alert('WRONG ANSWER');
-
+        //alert('WRONG ANSWER');
+        result.innerHTML = "Wrong";
         setTimeout('closeModal()',2000);
-
+        subtractFromScore();
       }
+
   }
 }
 
 var closeModal = function(){
   modal.style.display = "none";
+  result.innerHTML = "";
 }
 
-var showResult = function(){
+// var showResult = function(){
 
 
-}
+// }
 
 // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("btn-primary");
@@ -218,4 +218,8 @@ window.onclick = function(event) {
     }
 }
 
-
+//reset page
+// function resetPage() {
+//     document.getelementById('resetPage');
+//     location.reload();
+// }
