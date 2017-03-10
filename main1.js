@@ -1,4 +1,3 @@
-
 //define question
 var clues = []; // javascript array to manange clues instead of ajax
 
@@ -75,28 +74,28 @@ var score = document.getElementById('score');
 // Declare variable addTo Score and passed the object "p" in the function
 
 
-var addToScore = function (p){
+var addToScore = function (){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
   var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score + the score parsed from the html
-  var new_score = (current_score + p);
+  var new_score = parseInt(current_score + points);
 // stores the value
   score.innerHTML = new_score;
 }
 // Declare variable subtractFromScore and passes the object "p" in the function
-var subtractFromScore = function (p){
+var subtractFromScore = function (){
   // The object p contains the variable current_score and is equal to parsing the interger and defining it as a score
 // from int inner Html of the element.  Inner html already has the amount included in the p tag.
   var current_score = parseInt(score.innerHTML);
 // Declare variable new_score and set its to the current score minus the score parsed from the html
-  var new_score = current_score - p;
+  var new_score = parseInt(current_score - points);
 // updates the property to equal the variable new_score.
   score.innerHTML = new_score;
 }
 
 
-var points;
+var points = 0;
 
 
 //funcion to find index of a click class in array
@@ -122,11 +121,11 @@ var findClassIndex = function() {
       e.target.setAttribute('disabled','disabled');
       e.target.setAttribute('style','background-color:grey;');
       //  get the text inside any element including html + text
-      points = e.target.innerHTML;
+      points = parseInt(e.target.innerHTML);
       var qno = e.target.getAttribute('qno');
       showQuestion(qno);
       // DO IT ONLY IF THE ANSWER IS RIGHT THIS IS JUST FOR TESTING PURPOSE
-      addToScore(points);
+      // addToScore(points);
       // removing html tags and extracting plain text. for reference
        // console.log(e.target.innerHTML.replace(/<[^>]*>/g, ""));
     }
@@ -169,11 +168,12 @@ for(i=0;i<choice_btns.length;i++){
         //alert('VOlla');
         result.innerHTML = "Correct";
         setTimeout('closeModal()',2000); // close after 2 secs;
-
+        addToScore();
       }else{
         //alert('WRONG ANSWER');
         result.innerHTML = "Wrong";
         setTimeout('closeModal()',2000);
+        subtractFromScore();
       }
 
   }
