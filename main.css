@@ -31,7 +31,7 @@
 }
 
 .container {
-  margin: 5% auto;
+  margin: auto;
   background-color: #F4EBE8;
 }
 
@@ -98,6 +98,7 @@ a:focus {
 .btn-primary{
   margin-bottom: 10px;
   background-color: #267df4;
+  font-size: 1.5em;
 
 }
 
